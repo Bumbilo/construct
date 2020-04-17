@@ -2,7 +2,7 @@
 FROM node:alpine
 
 # Define work directy
-WORKDIR /usr/app
+WORKDIR /app
 
 # Copy files from './package.json' to './'
 COPY ./package.json ./
@@ -11,7 +11,7 @@ COPY ./package.json ./
 RUN npm install
 
 # Copy files from './' to './'
-COPY ./ ./
+COPY . .
 
 #Default command
 CMD ["npm", "start"]
